@@ -1,0 +1,459 @@
+/* src/app.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  /* Add this line to set height to 100% */
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex: 1;
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+
+
+}
+
+.product-image img{
+  width:50vw;
+  height: 100vh;
+  
+}
+
+.canvas {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  pointer-events: none;
+  min-height: 831px;
+  background: transparent;
+}
+
+/* Product Description styles */
+.product-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color:rgb(220, 159, 220);
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 40px 0px 0px 40px; */
+}
+
+.product-detail {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-info {
+ 
+  margin-left: 20px;
+
+  /* flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.product-info h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: black;
+  font-size: 70px;
+  
+}
+
+.product-info p {
+  margin-bottom: 20px;
+  color: black;
+
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: left;
+  
+  
+  margin-top: 20px;
+}
+
+.color-options {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: burlywood;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+  /* background-color: burlywood; */
+  position: absolute;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 10;
+
+}
+
+.navbar-brand {
+  flex: 1;
+  /* font-weight: bold; */
+  font-size: 40px;
+  font-style: Preahvihear;
+  color: black;
+}
+
+.navbar-brand img {
+  max-width: 100px;
+  /* Set the max-width as per your requirement */
+  max-height: 40px;
+  /* Set the max-height as per your requirement */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-item a {
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+  /* font-weight: bold; */
+}
+
+.navbar-item a:hover {
+  color: #ffcc00;
+}
+
+
+
+/* Footer styles */
+.footer {
+  /* background-color:burlywood; */
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-left: 20px;
+}
+
+.footer li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer li a:hover {
+  color: #ffcc00;
+}
+
+
+/* webgi
+#webgi-canvas {
+  width: 50%;
+  height: 50%;
+  background: transparent;
+} */
+
+/* #webgi-canvas-container {
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  pointer-events: none;
+  min-height: 831px;
+  background: transparent;
+} */
+
+/* #webgi-canvas-container .button {
+  background: #0071e3;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 17px;
+  font-weight: 400;
+  min-width: 28px;
+  padding: 8px 16px;
+  border-radius: 980px;
+  position: absolute;
+  top: 30px;
+  border: none;
+  z-index: 1;
+  transition-duration: 0.3s;
+} */
+
+
+/* product-box styles */
+.product-box {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  display: flex;
+  align-items: flex-start; /* Align box contents to the top */
+  justify-content: flex-start; /* Align box contents to the left */
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 100px;
+  width: 350px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+   /* Push box to the bottom of the parent container */
+  margin-left: 20px; /* Adjust this value for horizontal spacing */
+  border-radius: 35px;
+  background-color: white;
+}
+
+.productbox-image {
+  width: 170px;
+  height: 100px;
+  border-radius: 20px ;
+  
+}
+
+.productbox-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.productbox-button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  background:transparent;
+  color: black;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.text{
+  font-size:25px;
+  padding-left: 40px;
+  padding-bottom: 20px ;
+}
+
+
+
+model-viewer {
+  width: 100%;
+  height: 90%;
+  background-color: #ffffff;
+}
+
+.Hotspot {
+  background: #fff;
+  border-radius: 32px;
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  padding: 8px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 24px;
+}
+
+.Hotspot:not([data-visible]) {
+  background: transparent;
+  border: 4px solid #fff;
+  box-shadow: none;
+  height: 32px;
+  pointer-events: none;
+  width: 32px;
+}
+
+.Hotspot:focus {
+  border: 4px solid rgb(0, 128, 200);
+  height: 32px;
+  outline: none;
+  width: 32px;
+}
+
+.Hotspot > * {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.HotspotAnnotation{
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  left: calc(100% + 1em);
+  max-width: 128px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+}
+
+.Hotspot:not([data-visible]) > * {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 4px));
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.update-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s;
+}
+
+#ar-button {
+  background-image: url(ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 16px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+  from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes elongate {
+  from { transform: translateX(100px); }
+  to   { transform: translateX(-100px); }
+}
+
+model-viewer > #ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  animation: elongate 2s infinite ease-in-out alternate;
+  display: none;
+}
+
+model-viewer[ar-status="session-started"] > #ar-prompt {
+  display: block;
+}
+
+model-viewer > #ar-prompt > img {
+  animation: circle 4s linear infinite;
+}
