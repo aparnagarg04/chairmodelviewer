@@ -9,11 +9,11 @@ const Navbar = () => {
         noom 
       </div>
       <ul className="navbar-menu">
-        <li className="navbar-item"><a href="/">Home</a></li>
-        <li className="navbar-item"><a href="/">Products</a></li>
         <li className="navbar-item"><a href="/">About</a></li>
-        <li className="navbar-item"><a href="/">Contact</a></li>
-        <li className="navbar-item"><a href="/">Login</a></li>
+        <li className="navbar-item"><a href="/">Catalog</a></li>
+        <li className="navbar-item"><a href="/">Delivery</a></li>
+        <li className="navbar-item"><a href="/">Contacts</a></li>
+        
       </ul>
     </nav>
   );

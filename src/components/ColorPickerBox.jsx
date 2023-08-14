@@ -8,7 +8,7 @@ const ColorPickerBox = () => {
         <div className="color-circle"></div>
         <input type="color" className="color-input" />
       </div>
-      <button className="see-more-button">See More</button>
+      <button className="see-more-button">See More </button>
     </div>
   );
 };

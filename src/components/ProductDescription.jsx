@@ -23,12 +23,13 @@ const ProductDescription = () => {
                     <div className="color-option" style={{ backgroundColor: 'green' }}></div>
                     <div className="color-option" style={{ backgroundColor: 'blue' }}></div>
                 </div> */}
+                <div className="product-buttons">
+                <button>PreOrder Now</button>
             </div>
-            <div className="product-buttons">
-                <button>Add to Cart</button>
             </div>
+            
 
-            <ProductBox />
+            
         </div>
     );
 };
