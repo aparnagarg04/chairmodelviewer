@@ -1,6 +1,6 @@
 // src/components/ProductDescription.jsx
 import React from 'react';
-import '../app.css'; // Import app.css
+
 import ProductBox from './productbox';
 
 const ProductDescription = () => {
