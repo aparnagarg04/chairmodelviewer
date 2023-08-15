@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
-import '../app.css'; // Import app.css
+import '../App.css'; // Import app.css
 import { GrTextAlignLeft, GrClose } from "react-icons/gr";
 
 
