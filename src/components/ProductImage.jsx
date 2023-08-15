@@ -117,7 +117,8 @@ const ProductImage = () => {
       
 
 
-        <script src="script.js"></script>
+        {/* <script src="script.js"></script> */}
+        <ColorPickerBox  />
       </div>
 
       <div className="product-box">
@@ -134,7 +135,7 @@ const ProductImage = () => {
           {/* <div className='text' > Gropius Collection</div> */}
         </div>
       </div>
-      <ColorPickerBox />
+      
     </>
     
   );

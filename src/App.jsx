@@ -9,11 +9,6 @@ import ColorPickerBox from './components/ColorPickerBox';
 
 
 
-import { initializeApp } from "firebase/app";
-import firebaseConfig from '../src/components/firebaseConfig'; // Import your Firebase configuration
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
