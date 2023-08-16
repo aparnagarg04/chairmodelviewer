@@ -76,14 +76,35 @@ const ProductImage = () => {
   // }, []);
 
 
+  useEffect(() => {
+    const arStatusHandler = (event) => {
+      if (event.detail.status === 'failed') {
+        const error = document.querySelector('#error');
+        error.classList.remove('hide');
+        error.addEventListener('transitionend', () => {
+          error.classList.add('hide');
+        });
+      }
+    };
+
+    const modelViewer = document.querySelector('#orbit-demo');
+    modelViewer.addEventListener('ar-status', arStatusHandler);
+
+    return () => {
+      // Clean up the event listener when the component unmounts
+      modelViewer.removeEventListener('ar-status', arStatusHandler);
+    };
+  }, []);
+
   return (
     <>
       <div className="product-image">
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+        {/* <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> */}
+        
         <model-viewer
           src={glbfile}
-          
-          // auto-rotate
+          ar 
           ar-modes="scene-viewer webxr quick-look"
           id="orbit-demo"
           interpolation-decay="200"
@@ -97,28 +118,30 @@ const ProductImage = () => {
           poster="poster.webp"
           shadow-intensity="2"
           shadow-softness="0.41"
-          style={{ width: '100%', height: '100%' }}>
+          style={{ width: '100%', height: '100%'  }}>
+
+          {/* <div id="error" className="hide">AR is not supported on this device</div>
           <button className="Hotspot" slot="hotspot-1" data-position="-69.01234799569716m 40.571968812814475m 3.9978310674245847m" data-normal="-0.38122152852810287m 0.06480450343768764m -0.9222095870900995m" data-visibility-attribute="visible">
             <div className="HotspotAnnotation">fancy sofa</div>
           </button>
           <div className="progress-bar hide" slot="progress-bar">
             <div className="update-bar"></div>
           </div>
-          <button id="ar-button">
+          <button  id="ar-button">
             AR
           </button>
           <div id="ar-prompt">
             <img src="ar_hand_prompt.png" />
-          </div>
-          
-          
+          </div> */}
+
+
         </model-viewer>
 
-      
+    
 
 
         {/* <script src="script.js"></script> */}
-        <ColorPickerBox  />
+        <ColorPickerBox />
       </div>
 
       <div className="product-box">
@@ -127,7 +150,7 @@ const ProductImage = () => {
           <ul>
             <button className="productbox-buttone" onClick={() => changes("dublin_chair.glb", "chairchair.png")}>chair</button>
             <button className="productbox-buttone" onClick={() => changes("low_chairs.glb", "lowchair.png")}>low chair</button>
-            <button className="productbox-buttone" onClick={() => changes("jonstrup_bar_chair.glb", "barchair.png")}>bar chair</button>
+            <button className="productbox-buttone" onClick={() => changes("jonstrup_bar_chair.glb", "Screenshot (62).png")}>bar chair</button>
             <button className="productbox-buttone" onClick={() => changes("baby_chair.glb", "babychair.png")}>baby chair</button>
             <button className="productbox-buttone" onClick={() => changes("modern__sofa.glb", "sofa.png")}>sofa</button>
             <button className="productbox-buttone" onClick={() => changes("ottoman_stool.glb", "ottoman.png")}>ottoman</button>
@@ -135,9 +158,9 @@ const ProductImage = () => {
           {/* <div className='text' > Gropius Collection</div> */}
         </div>
       </div>
-      
+
     </>
-    
+
   );
 };
 

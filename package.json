@@ -12,6 +12,7 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
+    "@google/model-viewer": "^3.2.1",
     "firebase": "^10.1.0",
     "fonts": "^0.0.2",
     "google": "^2.1.0",

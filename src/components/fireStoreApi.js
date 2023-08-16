@@ -9,9 +9,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Function to fetch model data from Firestore based on product
-export async function fetchModelData(product) {
+export async function fetchModelData(clickfile) {
     try {
-        const modelDocRef = doc(db, 'model', product); // Use your collection name
+        const modelDocRef = doc(db, 'model', clickfile); // Use your collection name
         const modelDocSnap = await getDoc(modelDocRef);
 
         if (modelDocSnap.exists()) {
